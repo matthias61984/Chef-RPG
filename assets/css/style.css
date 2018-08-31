@@ -1,0 +1,59 @@
+body {
+    background-image: url('../images/kitchen_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#titleDiv {
+    background-color: rgb(255, 255, 255, 0.75);
+    margin: 5px 0px;
+    border-radius: 3px;
+    border: 3px solid black;
+}
+
+#title {
+    color: black;
+    text-align: center;
+}
+
+.character {
+    height: 150px;
+    width: 150px;
+    border-radius: 3px;
+    border: 3px solid black;
+    margin: 5px 0px;
+}
+
+.statCard {
+    background-color: grey;
+    border-radius: 3px;
+    border: 3px solid black;
+    margin: 5px 0px;
+    padding: 3px;
+}
+
+#instructionDiv {
+    background-color: rgb(255, 255, 255, 0.75);
+    text-align: center;
+    border-radius: 3px;
+    border: 3px solid black;
+    margin: 5px 0px;
+}
+
+#battleDiv {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#fightBtn {
+    border: 2px solid black;
+}
+
+#battleLog {
+    background-color: rgb(255, 255, 255, 0.75);
+    text-align: center;
+    border-radius: 3px;
+    border: 3px solid black;
+    margin: 5px 0px;
+}
