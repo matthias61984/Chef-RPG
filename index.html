@@ -15,7 +15,7 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <!-- Javascript -->
-        <script src="jquery-3.3.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -23,51 +23,48 @@
                 <div class="col-12" id="titleDiv"><h1 id="title">Kitchen Showdown RPG</h1></div>
             </div>
             <div class="row">
-                <div class="col-2 charPic" align="center" id="char1"><img src="./assets/images/Gordon_Ramsay.png" class="character"></div>
-                <div class="col-2 charPic" align="center" id="char2"><img src="./assets/images/Swedish_Chef.webp" class="character"></div>
-                <div class="col-2 charPic" align="center" id="char3"><img src="./assets/images/Julia_Childs.jpg" class="character"></div>
-                <div class="col-2 charPic" align="center" id="char4"><img src="./assets/images/Guy_Fieri.jpg" class="character"></div>
+                <div class="col-2" align="center"><img src="./assets/images/placeholder.png" class="character sideline" id="char1"></div>
+                <div class="col-2" align="center"><img src="./assets/images/placeholder.png" class="character sideline" id="char2"></div>
+                <div class="col-2" align="center"><img src="./assets/images/placeholder.png" class="character sideline" id="char3"></div>
+                <div class="col-2" align="center"><img src="./assets/images/placeholder.png" class="character sideline" id="char4"></div>
             </div>
             <div class="row">
                 <div class="col-2" id="stat_1">
                     <div class="statCard">
                         <h5>Gordon Ramsay</h5>
-                        <p>HP: 100</p>
-                        <p>Favored weapon: Chef's Knife</p>
+                        <p id="ramsayHP"></p>
+                        <p id="ramsayWep"></p>
                     </div>
                 </div>
                 <div class="col-2" id="stat_2">
                     <div class="statCard">
                         <h5>Swedish Chef</h5>
-                        <p>HP: 100</p>
-                        <p>Favored weapon: Wooden Spoon</p>
+                        <p id="swedishHP"></p>
+                        <p id="swedishWep"></p>
                     </div>
                 </div>
                 <div class="col-2" id="stat_3">
                     <div class="statCard">
                         <h5>Julia Childs</h5>
-                        <p>HP: 100</p>
-                        <p>Favored weapon: Rolling Pin</p>
+                        <p id="juliaHP"></p>
+                        <p id="juliaWep"></p>
                     </div>
                 </div>
                 <div class="col-2" id="stat_4">
                     <div class="statCard">
                         <h5>Guy Fieri</h5>
-                        <p>HP: 100</p>
-                        <p>Favored weapon: Hot Sauce</p>
+                        <p id="fieriHP"></p>
+                        <p id="fieriWep"></p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12" id="instructionDiv"><p>Click on a chef's picture to choose your character!</p></div>
+                <div class="col-12" id="battleLog"><p>Click on a chef's picture to choose your character!</p></div>
             </div>
             <div class="row" id="battleDiv">
-                <div class="col-2 charPic" align="center" id="yourChar"><img src="./assets/images/placeholder.png" class="character"></div>
+                <div class="col-2 empty" align="center" id="yourChar"><img src="./assets/images/placeholder.png" class="character"></div>
                 <div class="col-2" align="center"><button type="button" class="btn btn-danger" id="fightBtn"><span class="fa fa-chevron-left"></span> FIGHT! <span class="fa fa-chevron-right"></span></button></div>
-                <div class="col-2 charPic" align="center" id="yourEnemy"><img src="./assets/images/placeholder.png" class="character"></div>
-            </div>
-            <div class="row">
-                    <div class="col-12" id="battleLog"><p>Awaiting your selections...</p></div>
+                <div class="col-2 empty" align="center" id="yourEnemy"><img src="./assets/images/placeholder.png" class="character"></div>
             </div>
         </div>
         <script src="./assets/javascript/game.js" async defer></script>
