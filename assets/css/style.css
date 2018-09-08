@@ -5,7 +5,7 @@ body {
 }
 
 #titleDiv {
-    background-color: rgb(255, 255, 255, 0.75);
+    background-color: rgb(255, 255, 255, 0.8);
     margin: 5px 0px;
     border-radius: 3px;
     border: 3px solid black;
@@ -16,7 +16,7 @@ body {
     text-align: center;
 }
 
-.character {
+.characterPic {
     height: 150px;
     width: 150px;
     border-radius: 3px;
@@ -24,20 +24,10 @@ body {
     margin: 5px 0px;
 }
 
-.statCard {
-    background-color: grey;
+.character {
+    background-color: rgb(255, 255, 255, 0.8);
     border-radius: 3px;
     border: 3px solid black;
-    margin: 5px 0px;
-    padding: 3px;
-}
-
-#instructionDiv {
-    background-color: rgb(255, 255, 255, 0.75);
-    text-align: center;
-    border-radius: 3px;
-    border: 3px solid black;
-    margin: 5px 0px;
 }
 
 #battleDiv {
