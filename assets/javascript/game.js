@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-// Define chef characters as objects
+// Define chef characters as objects in an array
 character = [
     ramsay = {
         name: "Gordon Ramsay",
@@ -25,7 +25,7 @@ character = [
     },
     fieri = {
         name: "Guy Fieri",
-        hp: 175,
+        hp: 420,
         baseAttack: 12,
         counterAttack: 2,
         pic: "Guy_Fieri.jpg"
@@ -81,10 +81,10 @@ for(var i = 0; i < character.length; i++){
             var attackerHP = character[attackerID].hp;
             var defenderHP = character[defenderID].hp;
             var baseAttack = character[attackerID].baseAttack;
-            var baseCounter = character[defenderID].counterAttack;
+            var baseCounter = character[defenderID].counterAttack;     
         // Chosen character deals damage, then attack increases
             defenderHP -= baseAttack;
-            baseAttack += character[attackerID]["baseAttack"];
+            baseAttack += character[attackerID].baseAttack;
         // Enemy deals damage to player's character
             attackerHP -= baseCounter;
         // Update objects to reflect new stats
@@ -93,8 +93,15 @@ for(var i = 0; i < character.length; i++){
             character[attackerID].baseAttack = baseAttack;
         // Update corresponding stat cards with new hp
             console.log(attackerHP);
-            console.log(defenderHP);
             console.log(baseAttack);
+        // Run HP check
+            if (defenderHP <= 0) {
+            console.log(defenderHP);
+            $(".enemyChar").addClass("empty");
+            $(".enemyChar").attr("id", "yourEnemy");
+            $(".enemyChar").empty();
+            } else {
+            };
         } else {
             $("#battleLog").html("<p>Please choose your character and an enemy to begin!</p>");
         };
