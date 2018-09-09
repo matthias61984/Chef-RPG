@@ -1,48 +1,48 @@
 $(document).ready(function() {
 
 // Define chef characters as objects in an array
-character = [
-    ramsay = {
-        name: "Gordon Ramsay",
-        hp: 150,
-        baseAttack: 8,
-        counterAttack: 12,
-        pic: "Gordon_Ramsay.png"
-    },
-    swedish = {
-        name: "Swedish Chef",
-        hp: 80,
-        baseAttack: 10,
-        counterAttack: 3,
-        pic: "Swedish_Chef.webp"
-    },
-    julia = {
-        name: "Julia Childs",
-        hp: 120,
-        baseAttack: 9,
-        counterAttack: 15,
-        pic: "Julia_Childs.jpg"
-    },
-    fieri = {
-        name: "Guy Fieri",
-        hp: 420,
-        baseAttack: 12,
-        counterAttack: 2,
-        pic: "Guy_Fieri.jpg"
-    },
-];
+    character = [
+        ramsay = {
+            name: "Gordon Ramsay",
+            hp: 150,
+            baseAttack: 8,
+            counterAttack: 12,
+            pic: "Gordon_Ramsay.png"
+        },
+        swedish = {
+            name: "Swedish Chef",
+            hp: 80,
+            baseAttack: 10,
+            counterAttack: 3,
+            pic: "Swedish_Chef.webp"
+        },
+        julia = {
+            name: "Julia Childs",
+            hp: 120,
+            baseAttack: 9,
+            counterAttack: 15,
+            pic: "Julia_Childs.jpg"
+        },
+        fieri = {
+            name: "Guy Fieri",
+            hp: 175,
+            baseAttack: 12,
+            counterAttack: 2,
+            pic: "Guy_Fieri.jpg"
+        },
+    ];
 
 // Loop to display characters' pictures and stats from their objects
-for(var i = 0; i < character.length; i++){
-// Create a new div, add class character and id equal to index value from the character array
-    var div = $("<div>").addClass("col-md-2 character sideline").attr("id",i);
-    $("#characters").append(div);
-    div.append($("<img>").attr("src", "assets/images/" + character[i]["pic"]).addClass("characterPic"));
-    div.append($("<h5>").text(character[i]["name"]));
-    div.append($("<p>").html("Health Points: " + character[i]["hp"]))
-    div.append($("<p>").html("Attack Power: " + character[i]["baseAttack"]));
-    div.append($("<p>").html("Counter Attack: " + character[i]["counterAttack"]))
-};
+    for (var i = 0; i < character.length; i++) {
+        // Create a new div, add class character and id equal to index value from the character array
+        var div = $("<div>").addClass("col-md-2 character sideline").attr("id", i);
+        $("#characters").append(div);
+        div.append($("<img>").attr("src", "assets/images/" + character[i]["pic"]).addClass("characterPic"));
+        div.append($("<h5>").text(character[i]["name"]));
+        div.append($("<p>").html("Health Points: " + character[i]["hp"]))
+        div.append($("<p>").html("Attack Power: " + character[i]["baseAttack"]));
+        div.append($("<p>").html("Counter Attack: " + character[i]["counterAttack"]))
+    };
 
 // When one of the four chefs are clicked, that chef is moved to the player div
     $(".sideline").click(function() {
@@ -92,14 +92,15 @@ for(var i = 0; i < character.length; i++){
             character[defenderID].hp = defenderHP;
             character[attackerID].baseAttack = baseAttack;
         // Update corresponding stat cards with new hp
-            console.log(attackerHP);
-            console.log(baseAttack);
+            $(".playerChar p:nth-child(3)").text("Health Points: " + attackerHP);
+            $(".playerChar p:nth-child(4)").text("AttackPower: " + baseAttack);
+            $(".enemyChar p:nth-child(3)").text("Health Points: " + defenderHP);
         // Run HP check
             if (defenderHP <= 0) {
-            console.log(defenderHP);
             $(".enemyChar").addClass("empty");
             $(".enemyChar").attr("id", "yourEnemy");
             $(".enemyChar").empty();
+            $("#battleLog").html("<p>Pick your next challenger!</p>");
             } else {
             };
         } else {
