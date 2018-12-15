@@ -6,7 +6,7 @@ $(document).ready(function() {
             name: "Gordon Ramsay",
             hp: 150,
             baseAttack: 8,
-            counterAttack: 12,
+            counterAttack: 120,
             pic: "Gordon_Ramsay.png"
         },
         swedish = {
@@ -58,18 +58,18 @@ $(document).ready(function() {
             $("#battleLog").html("<p>Choose your first challenger from the remaining chefs!</p>");
         };
 
-    // When one of the remaining chefs is clicked, that chef is moved to the enemy div
-        $(".enemies").click(function() {
-            if ($("#yourEnemy").hasClass("empty") == true) {
-                $("#yourEnemy").replaceWith(this);
-                $(this).addClass("enemyChar");
-                $(this).removeClass("enemies");
-                $("#yourEnemy").removeClass("empty");
-            // Battle Log is updated with new instructions
-                $("#battleLog").html("<p>Click the fight button when you are ready!</p>");
-            };
-        });        
-    });
+// When one of the remaining chefs is clicked, that chef is moved to the enemy div
+    $(".enemies").click(function() {
+        if ($("#yourEnemy").hasClass("empty") == true) {
+            $("#yourEnemy").replaceWith(this);
+            $(this).addClass("enemyChar");
+            $(this).removeClass("enemies");
+            $("#yourEnemy").removeClass("empty");
+        // Battle Log is updated with new instructions
+            $("#battleLog").html("<p>Click the fight button when you are ready!</p>");
+        };
+    });        
+});
 
 // When the fight button is clicked, playerChar and enemyChar deal damage to each other
     $("#fightBtn").click(function() {
@@ -96,11 +96,15 @@ $(document).ready(function() {
             $(".playerChar p:nth-child(4)").text("Attack Power: " + baseAttack);
             $(".enemyChar p:nth-child(3)").text("Health Points: " + defenderHP);
         // Run HP check
-            if (defenderHP <= 0) {
-            $(".enemyChar").addClass("empty");
-            $(".enemyChar").attr("id", "yourEnemy");
-            $(".enemyChar").empty();
-            $("#battleLog").html("<p>Pick your next challenger!</p>");
+            if (attackerHP <= 0) {
+                $(".playerChar").empty();
+                $("#battleLog").html("<p>You have been defeated!</p>");
+                $("#fightBtn").hide();
+            } else if (defenderHP <= 0) {
+                $(".enemyChar").addClass("empty");
+                $(".enemyChar").attr("id", "yourEnemy");
+                $(".enemyChar").empty();
+                $("#battleLog").html("<p>Pick your next challenger!</p>");
             } else {
             };
         } else {

@@ -40,7 +40,7 @@ body {
     flex-wrap: wrap;
 }
 
-#fightBtn {
+#fightBtn, #playBtn {
     border: 2px solid black;
 }
 
