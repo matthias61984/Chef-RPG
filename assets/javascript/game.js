@@ -97,10 +97,12 @@ $(document).ready(function() {
             $(".enemyChar p:nth-child(3)").text("Health Points: " + defenderHP);
         // Run HP check
             if (attackerHP <= 0) {
+            // If attacker is defeated, empty the player's character card and remove the fight button
                 $(".playerChar").empty();
                 $("#battleLog").html("<p>You have been defeated!</p>");
                 $("#fightBtn").hide();
             } else if (defenderHP <= 0) {
+            // If defender is defeated, empty the defender's character card and prompt the next challenger to be chosen
                 $(".enemyChar").addClass("empty");
                 $(".enemyChar").attr("id", "yourEnemy");
                 $(".enemyChar").empty();
