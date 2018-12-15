@@ -1,6 +1,19 @@
-# unit-4-game
+## Chef RPG
 
-This is an rpg-style battle game in which characters deal damage based on their statistics. Power of selected character increases every turn.
-Jquery used. Each character is represented as an object.
 
-Needs: win/reset function, fix damage so it increments.
+
+## Built With
+
+HTML, CSS, Javascript, Jquery
+
+## Authors
+
+* **Corey Walsh** 
+
+## Acknowledgments
+
+* The Rubber Ducky
+
+## Needs
+
+game win/reset function
