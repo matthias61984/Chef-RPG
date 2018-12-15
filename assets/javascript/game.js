@@ -80,11 +80,11 @@ $(document).ready(function() {
         // Set combatant hit point and attack power based on IDs
             var attackerHP = character[attackerID].hp;
             var defenderHP = character[defenderID].hp;
+            var baseCounter = character[defenderID].counterAttack;
             var baseAttack = character[attackerID].baseAttack;
-            var baseCounter = character[defenderID].counterAttack;     
         // Chosen character deals damage, then attack increases
             defenderHP -= baseAttack;
-            baseAttack += character[attackerID].baseAttack;
+            baseAttack += baseAttack;
         // Enemy deals damage to player's character
             attackerHP -= baseCounter;
         // Update objects to reflect new stats
@@ -93,7 +93,7 @@ $(document).ready(function() {
             character[attackerID].baseAttack = baseAttack;
         // Update corresponding stat cards with new hp
             $(".playerChar p:nth-child(3)").text("Health Points: " + attackerHP);
-            $(".playerChar p:nth-child(4)").text("AttackPower: " + baseAttack);
+            $(".playerChar p:nth-child(4)").text("Attack Power: " + baseAttack);
             $(".enemyChar p:nth-child(3)").text("Health Points: " + defenderHP);
         // Run HP check
             if (defenderHP <= 0) {
