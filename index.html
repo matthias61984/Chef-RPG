@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Chef Showdown RPG</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Reset CSS -->
@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-        <!-- Javascript -->
+        <!-- Jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
@@ -23,14 +23,10 @@
             <div class="row">
                 <div class="col-12" id="titleDiv"><h1 id="title">Kitchen Showdown RPG</h1></div>
             </div>
+    <!-- Game Div starts here -->
+        <div id="gameDiv">
         <!-- Character Row (filled from character array)-->
             <div class="row" align="center" id="characters">
-            </div>
-        <!-- Play Game button row-->
-            <div class="row" align="center">
-                <div class="col-2 offset-md-5" align="center">
-                    <button type="button" class="btn btn-danger" id="playBtn"><span class="fa fa-chevron-left"></span> START GAME! <span class="fa fa-chevron-right"></span></button>
-                </div>
             </div>
         <!-- Log/instruction row -->
             <div class="row" align="center">
@@ -46,6 +42,13 @@
                 </div>
                 <div class="col-2 empty" align="center" id="yourEnemy">
                     <img src="./assets/images/placeholder.png" class="characterPic">
+                </div>
+            </div>
+        </div>
+        <!-- Play Game button Div starts here -->
+            <div class="row" align="center">
+                <div class="col-2 offset-md-5" align="center">
+                    <button type="button" class="btn btn-danger" id="playBtn"><span class="fa fa-chevron-left"></span> START GAME! <span class="fa fa-chevron-right"></span></button>
                 </div>
             </div>
         </div>

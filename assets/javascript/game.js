@@ -32,6 +32,15 @@ $(document).ready(function() {
         },
     ];
 
+// Start game on click
+    $("#playBtn").click(function() {
+        $("#gameDiv").css("visibility", "visible");
+        $("#playBtn").hide();
+        playGame();
+    });
+
+// Start Game
+    var playGame = function() {
 // Loop to display characters' pictures and stats from their objects
     for (var i = 0; i < character.length; i++) {
         // Create a new div, add class character and id equal to index value from the character array
@@ -58,18 +67,18 @@ $(document).ready(function() {
             $("#battleLog").html("<p>Choose your first challenger from the remaining chefs!</p>");
         };
 
-// When one of the remaining chefs is clicked, that chef is moved to the enemy div
-    $(".enemies").click(function() {
-        if ($("#yourEnemy").hasClass("empty") == true) {
-            $("#yourEnemy").replaceWith(this);
-            $(this).addClass("enemyChar");
-            $(this).removeClass("enemies");
-            $("#yourEnemy").removeClass("empty");
-        // Battle Log is updated with new instructions
-            $("#battleLog").html("<p>Click the fight button when you are ready!</p>");
-        };
-    });        
-});
+    // When one of the remaining chefs is clicked, that chef is moved to the enemy div
+        $(".enemies").click(function() {
+            if ($("#yourEnemy").hasClass("empty") == true) {
+                $("#yourEnemy").replaceWith(this);
+                $(this).addClass("enemyChar");
+                $(this).removeClass("enemies");
+                $("#yourEnemy").removeClass("empty");
+            // Battle Log is updated with new instructions
+                $("#battleLog").html("<p>Click the fight button when you are ready!</p>");
+            };
+        });        
+    });
 
 // When the fight button is clicked, playerChar and enemyChar deal damage to each other
     $("#fightBtn").click(function() {
@@ -101,6 +110,7 @@ $(document).ready(function() {
                 $(".playerChar").empty();
                 $("#battleLog").html("<p>You have been defeated!</p>");
                 $("#fightBtn").hide();
+                $("#playBtn").show();
             } else if (defenderHP <= 0) {
             // If defender is defeated, empty the defender's character card and prompt the next challenger to be chosen
                 $(".enemyChar").addClass("empty");
@@ -113,4 +123,5 @@ $(document).ready(function() {
             $("#battleLog").html("<p>Please choose your character and an enemy to begin!</p>");
         };
     });
+    };
 });

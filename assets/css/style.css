@@ -4,6 +4,10 @@ body {
     background-repeat: no-repeat;
 }
 
+#gameDiv {
+    visibility: hidden;
+}
+
 #titleDiv {
     background-color: rgb(255, 255, 255, 0.8);
     margin: 5px 0px;
@@ -18,6 +22,7 @@ body {
 
 #characters {
     height: 325px;
+    margin: 0 0 5px 0;
 }
 
 .characterPic {
