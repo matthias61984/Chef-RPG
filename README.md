@@ -1,6 +1,6 @@
 ## Chef RPG
 
-This application is a browser-based game in which the player can choose one of four characters and proceed to battle the remaining three. Written in javascript and jquery, this application demonstrates a basic DOM element targeting and uses css classes to control the status of each character when in different phases of the game.
+This application is a browser-based game in which the player can choose one of four characters and proceed to battle the remaining three. Written in javascript and jquery, this application demonstrates basic DOM element targeting and uses css classes to control the status of each character when in different phases of the game.
 
 ## To Play
 
