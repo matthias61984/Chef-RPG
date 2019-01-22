@@ -16,7 +16,7 @@ Your character's attack power will increase with each attack, so pay attention t
 
 ## Built With
 
-HTML, CSS, Javascript, Jquery
+HTML, CSS, Javascript, and Jquery
 
 ## Authors
 
