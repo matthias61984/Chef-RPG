@@ -2,6 +2,10 @@
 
 This application is a browser-based game in which the player can choose one of four characters and proceed to battle the remaining three. Written in javascript and jquery, this application demonstrates basic DOM element targeting and uses css classes to control the status of each character when in different phases of the game.
 
+## Deployment
+
+Deployed on github pages at https://matthias61984.github.io/Chef-RPG/.
+
 ## To Play
 
 Click on a chef's portrait to choose your character. Then, carefully choose your opponents one by one and click the Fight button to do battle. 
